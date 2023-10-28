@@ -1,5 +1,5 @@
 import React from 'react';
-import './Result.css'; // Result bileşeni için CSS dosyasını içe aktar
+import './Result.css';
 
 function Result(props) {
     if (!props.resultImage) {

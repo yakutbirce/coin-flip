@@ -4,7 +4,7 @@ import Coin from './components/Coin';
 import Result from './components/Result';
 
 function App() {
-  const [coinSide, setCoinSide] = useState(''); // İlk değeri boş olarak ayarlandı.
+  const [coinSide, setCoinSide] = useState('');
   const [resultImage, setResultImage] = useState(null);
 
   const flipCoin = () => {
@@ -12,15 +12,15 @@ function App() {
     setCoinSide(randomSide);
 
     if (randomSide === 'heads') {
-      setResultImage('/heads.png'); // Resim dosyasının yolu
+      setResultImage('/heads.png');
     } else {
-      setResultImage('/tails.png'); // Resim dosyasının yolu
+      setResultImage('/tails.png');
     }
   };
 
   return (
-    <div className="app-container"> {/* Kart görünümü için bir konteyner ekleyin */}
-      <div className="app-card"> {/* Kartın içeriği */}
+    <div className="app-container">
+      <div className="app-card">
         <h1>Coin Flipper</h1>
         <Coin flipCoin={flipCoin} />
         <Result resultImage={resultImage} coinSide={coinSide} />

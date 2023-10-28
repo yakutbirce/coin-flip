@@ -1,5 +1,5 @@
 import React from 'react';
-import './Coin.css'; // Coin bileşeni için CSS dosyasını içe aktar
+import './Coin.css';
 
 function Coin(props) {
     return (
