@@ -1,0 +1,9 @@
+/* Result.css */
+.result-container {
+  text-align: center;
+}
+
+.result-image {
+  max-width: 200px;
+  height: auto;
+}

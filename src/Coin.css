@@ -1,0 +1,30 @@
+.coin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-button {
+  background-color: #6da11ac2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.flip-button:hover {
+  background-color: #5a8516;
+}
+/* Result.css */
+.result-container {
+  text-align: center;
+}
+
+.result-image {
+  max-width: 200px;
+  height: auto;
+}

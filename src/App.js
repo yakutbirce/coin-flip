@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Coin from './Coin';
+import Result from './Result';
 
 function App() {
+  const [coinSide, setCoinSide] = useState(''); // İlk değeri boş olarak ayarlandı.
+  const [resultImage, setResultImage] = useState(null);
+
+  const flipCoin = () => {
+    const randomSide = Math.random() < 0.5 ? 'heads' : 'tails';
+    setCoinSide(randomSide);
+
+    if (randomSide === 'heads') {
+      setResultImage('/heads.png'); // Resim dosyasının yolu
+    } else {
+      setResultImage('/tails.png'); // Resim dosyasının yolu
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container"> {/* Kart görünümü için bir konteyner ekleyin */}
+      <div className="app-card"> {/* Kartın içeriği */}
+        <h1>Coin Flipper</h1>
+        <Coin flipCoin={flipCoin} />
+        <Result resultImage={resultImage} coinSide={coinSide} />
+      </div>
     </div>
   );
 }
