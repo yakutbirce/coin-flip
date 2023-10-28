@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import Coin from './Coin';
-import Result from './Result';
+import Coin from './components/Coin';
+import Result from './components/Result';
 
 function App() {
   const [coinSide, setCoinSide] = useState(''); // İlk değeri boş olarak ayarlandı.
